@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import Sugestoes from './Sugestoes';
 import Usuario from './Usuario'
 
+
 export function SideBar() {
+    const [usuario, setUsuario] = useState("catanacomics");
+    const [imgUsuario, setImgUsuario] = useState("assets/img/catanacomics.svg");
+
     return (
         <div class='sidebar'>
-            <Usuario />
+            <Usuario usuario = {usuario} img = {imgUsuario}/>
             <Sugestoes />
             <div class="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
