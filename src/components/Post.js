@@ -7,7 +7,7 @@ export function Post(props){
     const[curtidas, setCurtidas] = useState(props.curtidas);
 
     return (
-        <div class="post">
+        <div data-test="post" class="post">
             <div class="topo">
               <div class="usuario">
                 <img src={props.imgTopo} alt={props.usuario}/>
@@ -19,9 +19,11 @@ export function Post(props){
             </div>
 
             <div class="conteudo">
-              <img src={props.imgPost} 
-                   alt=""
-                   onClick= {() => {if(iconeCurtir === "heart-outline"){setIconeCurtir("heart");setCor("vermelho");setCurtidas(curtidas + 1);}}}
+              <img 
+                data-test="post-image"
+                src={props.imgPost} 
+                alt="imagem do post"
+                onClick= {() => {if(iconeCurtir === "heart-outline"){setIconeCurtir("heart");setCor("vermelho");setCurtidas(curtidas + 1);}}}
               />
             </div>
 
@@ -29,6 +31,7 @@ export function Post(props){
               <div class="acoes">
                 <div>
                   <ion-icon 
+                    data-test="like-post"
                     class = {cor} 
                     name={iconeCurtir}
                     onClick = {() => {
@@ -48,7 +51,8 @@ export function Post(props){
                   <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                  <ion-icon 
+                  <ion-icon
+                    data-test="save-post" 
                     onClick = {() => iconeSalvar === "bookmark-outline" ? setIconeSalvar("bookmark") : setIconeSalvar("bookmark-outline")} 
                     name={iconeSalvar}
                   >
@@ -59,7 +63,7 @@ export function Post(props){
               <div class="curtidas">
                 <img src={props.imgBottom} alt=""/>
                 <div class="texto">
-                  Curtido por <strong>{props.curtidoPor}</strong> e <strong>outras {new Intl.NumberFormat('de-DE').format(curtidas)} pessoas</strong>
+                  Curtido por <strong>{props.curtidoPor}</strong> e <strong data-test="likes-number">outras {new Intl.NumberFormat('de-DE').format(curtidas)} pessoas</strong>
                 </div>
               </div>
             </div>
