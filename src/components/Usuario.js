@@ -9,15 +9,17 @@ export default function Usuario(props){
 
   function alterarNome(){
     let nome = prompt("Digite o nome desejado: ");
-    while(!nome)
+    while(!nome){
         nome = prompt("Digite um nome válido!");
+    }
     setUsuario(nome);
   }
 
   function alterarFoto(){
     let novaImg = prompt("Coloque aqui a url da imagem: ");
-    while(!novaImg)
+    while(!novaImg){
         novaImg = prompt("Digite uma url válida!");
+    }
     setImgUsuario(novaImg);
   }
 

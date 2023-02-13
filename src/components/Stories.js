@@ -9,7 +9,7 @@ const stories = [
     { imagem: "assets/img/respondeai.svg", usuario: "respondeai" },
     { imagem: "assets/img/filomoderna.svg", usuario: "filomoderna" },
     { imagem: "assets/img/memeriagourmet.svg", usuario: "memeriagourmet" }
-]
+];
 
 export function Stories() {
     return (

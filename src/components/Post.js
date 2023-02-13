@@ -19,20 +19,26 @@ export function Post(props){
             </div>
 
             <div className="conteudo">
-              <img 
+              <img
                 data-test="post-image"
-                src={props.imgPost} 
+                src={props.imgPost}
                 alt="imagem do post"
-                onDoubleClick= {() => {if(iconeCurtir === "heart-outline"){setIconeCurtir("heart");setCor("vermelho");setCurtidas(curtidas + 1);}}}
+                onDoubleClick= {() => {
+                  if(iconeCurtir === "heart-outline"){
+                    setIconeCurtir("heart");
+                    setCor("vermelho");
+                    setCurtidas(curtidas + 1);
+                  }
+                }}
               />
             </div>
 
             <div className="fundo">
               <div className="acoes">
                 <div>
-                  <ion-icon 
+                  <ion-icon
                     data-test="like-post"
-                    class = {cor} 
+                    class = {cor}
                     name={iconeCurtir}
                     onClick = {() => {
                       if(iconeCurtir === "heart-outline"){
@@ -52,8 +58,8 @@ export function Post(props){
                 </div>
                 <div>
                   <ion-icon
-                    data-test="save-post" 
-                    onClick = {() => iconeSalvar === "bookmark-outline" ? setIconeSalvar("bookmark") : setIconeSalvar("bookmark-outline")} 
+                    data-test="save-post"
+                    onClick = {() => iconeSalvar === "bookmark-outline" ? setIconeSalvar("bookmark") : setIconeSalvar("bookmark-outline")}
                     name={iconeSalvar}
                   >
                   </ion-icon>
