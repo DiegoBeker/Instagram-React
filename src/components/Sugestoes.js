@@ -10,12 +10,12 @@ const sugestoes = [
 
 export default function Sugestoes() {
   return (
-    <div class="sugestoes">
-      <div class="titulo">
+    <div className="sugestoes">
+      <div className="titulo">
         Sugestões para você
         <div>Ver tudo</div>
       </div>
-      {sugestoes.map((s) => <Sugestao img={s.img} nome={s.nome} info={s.info} />)}
+      {sugestoes.map((s) => <Sugestao key = {s.nome} img={s.img} nome={s.nome} info={s.info} />)}
     </div>
   );
 }

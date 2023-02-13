@@ -13,9 +13,9 @@ const stories = [
 
 export function Stories() {
     return (
-        <div class="stories">
-            {stories.map((s) => <Story imagem = {s.imagem} usuario = {s.usuario}/>)}
-            <div class="setinha">
+        <div className="stories">
+            {stories.map((s) => <Story key = {s.usuario} imagem = {s.imagem} usuario = {s.usuario}/>)}
+            <div className="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
         </div>

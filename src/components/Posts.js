@@ -19,7 +19,7 @@ const posts = [
   },
   {
     imgTopo: "assets/img/barked.svg",
-    usuario: "barked",
+    usuario: "barked2",
     imgPost: "assets/img/dog.svg",
     imgBottom: "assets/img/adorable_animals.svg",
     curtidoPor: "adorable_animals",
@@ -29,10 +29,11 @@ const posts = [
 
 export default function Posts() {
   return (
-    <div class="posts">
+    <div className="posts">
       {posts.map((p) => {
         return (
           <Post
+            key={p.usuario}
             imgTopo={p.imgTopo}
             usuario={p.usuario}
             imgPost={p.imgPost}

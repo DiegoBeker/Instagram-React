@@ -1,15 +1,15 @@
 export function Sugestao(props){
     return(
-        <div class="sugestao">
-            <div class="usuario">
+        <div className="sugestao">
+            <div className="usuario">
               <img src={props.img} alt={props.nome} />
-              <div class="texto">
-                <div class="nome">{props.nome}</div>
-                <div class="razao">{props.info}</div>
+              <div className="texto">
+                <div className="nome">{props.nome}</div>
+                <div className="razao">{props.info}</div>
               </div>
             </div>
 
-            <div class="seguir">Seguir</div>
+            <div className="seguir">Seguir</div>
           </div>
     );
 }

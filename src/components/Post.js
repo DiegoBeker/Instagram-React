@@ -7,28 +7,28 @@ export function Post(props){
     const[curtidas, setCurtidas] = useState(props.curtidas);
 
     return (
-        <div data-test="post" class="post">
-            <div class="topo">
-              <div class="usuario">
+        <div data-test="post" className="post">
+            <div className="topo">
+              <div className="usuario">
                 <img src={props.imgTopo} alt={props.usuario}/>
                 {props.usuario}
               </div>
-              <div class="acoes">
+              <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
               </div>
             </div>
 
-            <div class="conteudo">
+            <div className="conteudo">
               <img 
                 data-test="post-image"
                 src={props.imgPost} 
                 alt="imagem do post"
-                onClick= {() => {if(iconeCurtir === "heart-outline"){setIconeCurtir("heart");setCor("vermelho");setCurtidas(curtidas + 1);}}}
+                onDoubleClick= {() => {if(iconeCurtir === "heart-outline"){setIconeCurtir("heart");setCor("vermelho");setCurtidas(curtidas + 1);}}}
               />
             </div>
 
-            <div class="fundo">
-              <div class="acoes">
+            <div className="fundo">
+              <div className="acoes">
                 <div>
                   <ion-icon 
                     data-test="like-post"
@@ -60,9 +60,9 @@ export function Post(props){
                 </div>
               </div>
 
-              <div class="curtidas">
+              <div className="curtidas">
                 <img src={props.imgBottom} alt=""/>
-                <div class="texto">
+                <div className="texto">
                   Curtido por <strong>{props.curtidoPor}</strong> e <strong data-test="likes-number">outras {new Intl.NumberFormat('de-DE').format(curtidas)} pessoas</strong>
                 </div>
               </div>
