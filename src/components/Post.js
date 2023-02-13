@@ -5,6 +5,7 @@ export function Post(props){
     const[iconeCurtir, setIconeCurtir] = useState("heart-outline");
     const[cor, setCor] = useState("");
     const[curtidas, setCurtidas] = useState(props.curtidas);
+    const[animacao, setAnimacao] = useState('');
 
     return (
         <div data-test="post" className="post">
@@ -28,9 +29,15 @@ export function Post(props){
                     setIconeCurtir("heart");
                     setCor("vermelho");
                     setCurtidas(curtidas + 1);
+                    setAnimacao('show');
+                    setTimeout(() => setAnimacao('show animacao'), 50);
+                    setTimeout(() => setAnimacao(''), 500);
                   }
                 }}
               />
+              <div class = {`heart ${animacao}`}>
+                <ion-icon name="heart"></ion-icon>
+              </div>
             </div>
 
             <div className="fundo">

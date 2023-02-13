@@ -308,3 +308,26 @@ ion-icon {
 .vermelho{
   color: red;
 }
+
+.post .conteudo{
+  position: relative;
+}
+
+.heart{
+  display: none;
+  color: whitesmoke;
+  font-size: 30px;
+  position: absolute;
+  top : 285px;
+  left: 285px;
+}
+
+.show{
+  display: flex;
+}
+
+.animacao{
+  transition: linear 0.3s;
+  transform: scale(5, 5);
+}
+
